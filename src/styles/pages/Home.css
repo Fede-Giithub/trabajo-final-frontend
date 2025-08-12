@@ -1,9 +1,36 @@
-.titulo-home h1{
+.titulo h1{
     text-align: center;
     font-size: 60px;
     margin-bottom: 10px;
 }
 
-.titulo-home p {
+.titulo p {
+    font-size: 25px;
+}
+
+.info-general h2{
+    font-size: 23px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.info-general ul {
+    font-size: px;
+    margin-bottom:10px;
+}
+.info-general li{
+    margin-top: 10px;
+}
+.info-general p {
+    color:grey;
+}
+.titulo-productos{
     font-size: 30px;
+    margin-bottom: 10px;
+}
+.subtitulo-productos{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.secc-products h2{
+    
 }

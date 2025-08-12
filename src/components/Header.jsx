@@ -9,7 +9,7 @@ const Header = () => {
   }
 
   return (
-    <header style={{ backgroundColor: "lightblue" }}>
+    <header style={{ backgroundColor: "#4CAF50" }}>
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="imagen de logo" />
       <nav>
         <ul>

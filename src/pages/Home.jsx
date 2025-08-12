@@ -87,12 +87,12 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="titulo-home">
+      <section className="titulo">
         <h1>Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
-      <section>
+      <section className="info-general">
         <h2>¿Por qué elegirnos?</h2>
         <ul>
           <li>
@@ -110,9 +110,9 @@ const Home = () => {
         </ul>
       </section>
 
-      <section>
-        <h2>Nuestros productos</h2>
-        <p>Elegí entre nuestras categorías más populares.</p>
+      <section className="section-products">
+        <h2 className="titulo-productos">Nuestros productos</h2>
+        <p className="subtitulo-productos">Elegí entre nuestras categorías más populares.</p>
 
 
         {
