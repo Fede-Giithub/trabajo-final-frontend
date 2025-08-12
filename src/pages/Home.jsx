@@ -154,10 +154,10 @@ const Home = () => {
           </section>
         }
 
-        <div>
+        <div className="products-container" >
           {
-            products.map((product) => <div key={product.id}>
-              <h2 key={product.id}>{product.title}</h2>
+            products.map((product) => <div key={product.id} className="product-card" >
+              <h2  key={product.id}>{product.title}</h2>
               <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
               <p>${product.price}</p>
               <p>{product.description}</p>
