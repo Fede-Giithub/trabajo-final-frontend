@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
 
+import "../styles/pages/Home.css"
+
 const Home = () => {
   const [products, setProducts] = useState([])
   const [showPopup, setShowPopup] = useState(null)
@@ -85,7 +87,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <section>
+      <section className="titulo-home">
         <h1>Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
