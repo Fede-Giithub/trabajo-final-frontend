@@ -165,7 +165,8 @@ const Home = () => {
      
    <div className="container">
   <div className="row">
-    {products.map((product) => (
+    {products.filter(product => product.title.includes(buscar))
+    .map((product) => (  
       <div className="col-12 col-md-4 mb-4" key={product.id}>
         <div className="card h-100 text-center custom-card ">
           <img
