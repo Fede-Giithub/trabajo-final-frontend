@@ -87,12 +87,12 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="titulo">
+      <section >
         <h1>Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
-      <section className="info-general">
+      <section >
         <h2>¿Por qué elegirnos?</h2>
         <ul>
           <li>
@@ -110,9 +110,9 @@ const Home = () => {
         </ul>
       </section>
 
-      <section className="section-products">
-        <h2 className="titulo-productos">Nuestros productos</h2>
-        <p className="subtitulo-productos">Elegí entre nuestras categorías más populares.</p>
+      <section >
+        <h2 >Nuestros productos</h2>
+        <p >Elegí entre nuestras categorías más populares.</p>
 
 
         {
@@ -154,9 +154,9 @@ const Home = () => {
           </section>
         }
 
-        <div className="products-container" >
+        <div  >
           {
-            products.map((product) => <div key={product.id} className="product-card" >
+            products.map((product) => <div key={product.id} >
               <h2  key={product.id}>{product.title}</h2>
               <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
               <p>${product.price}</p>
