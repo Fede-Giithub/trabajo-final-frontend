@@ -113,6 +113,11 @@ const Home = () => {
       <section >
         <h2 className="pt-2 text-center" >Nuestros productos</h2>
         <p className="text-center" >Elegí entre nuestras categorías más populares.</p>
+         <div className="p-4">
+            <label className="d-inline p-2 bd-highlight">Buscador:</label>
+            <input className="d-inline p-2 bd-highlight rounded-pill " type="text" placeholder="Ingrese lo que busca..." />
+            <button type="button" class="btn btn-secondary d-inline ps-2 bd-highlight ms-2">Buscar</button>
+          </div>
 
 
         {
