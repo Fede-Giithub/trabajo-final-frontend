@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
-
+import logoCarrito from '../assets/logo_carrito.png';
 const Header = () => {
   const { user, logout } = useAuth()
 
@@ -10,25 +10,30 @@ const Header = () => {
 
   return (
     <header style={{ backgroundColor: "#4CAF50" }}>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="imagen de logo" />
-      <nav>
-        <ul>
-          {/* Cambiar elementos a por componentes Link de react-router-dom */}
-          {
-            user && <>
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/dashboard">Dashboard</Link></li>
-              <button onClick={handleLogout}>Cerrar sesión</button>
-            </>
-          }
-          {
-            !user && <>
-              <li><Link to="/login">Login</Link></li>
-              <li><Link to="/registrate">Registrate</Link></li>
-            </>
-          }
-        </ul>
-      </nav>
+      
+  <nav className="nav ">
+    <div className="d-flex justify-content-start align-items-center">
+  <img
+    src={logoCarrito}
+    alt="logo carrito"
+    style={{ width: "40px", height: "auto" }}
+  />
+</div>
+  {user && (
+    <>
+      <Link className="nav-link" to="/">Inicio</Link>
+      <Link className="nav-link" to="/dashboard">Dashboard</Link>
+      <button className="btn btn-outline-danger ms-2" onClick={handleLogout}>Cerrar sesión</button>
+    </>
+  )}
+
+  {!user && (
+    <>
+      <Link className="nav-link" to="/login">Login</Link>
+      <Link className="nav-link" to="/registrate">Registrate</Link>
+    </>
+  )}
+</nav>
     </header>
   )
 }
