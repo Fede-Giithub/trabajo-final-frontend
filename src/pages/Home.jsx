@@ -88,31 +88,31 @@ const Home = () => {
   return (
     <Layout>
       <section >
-        <h1>Bienvenido a Nuestra Tienda</h1>
-        <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
+        <h1 className="fs-1 text-center fw-bold" >Bienvenido a Nuestra Tienda</h1>
+        <p className="fs-3 ">Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section >
-        <h2>¿Por qué elegirnos?</h2>
+        <h2 className="fw-bold fs-2 pt-2">¿Por qué elegirnos?</h2>
         <ul>
           <li>
-            <h3>Envíos a todo el país</h3>
-            <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+            <h3  >Envíos a todo el país</h3>
+            <p className="text-secondary" >Recibí tu compra en la puerta de tu casa estés donde estés.</p>
           </li>
           <li>
             <h3>Pagos seguros</h3>
-            <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
+            <p className="text-secondary">Trabajamos con plataformas que garantizan tu seguridad.</p>
           </li>
           <li>
             <h3>Atención personalizada</h3>
-            <p>Estamos disponibles para ayudarte en todo momento.</p>
+            <p className="text-secondary">Estamos disponibles para ayudarte en todo momento.</p>
           </li>
         </ul>
       </section>
 
       <section >
-        <h2 >Nuestros productos</h2>
-        <p >Elegí entre nuestras categorías más populares.</p>
+        <h2 className="pt-2 text-center" >Nuestros productos</h2>
+        <p className="text-center" >Elegí entre nuestras categorías más populares.</p>
 
 
         {
@@ -153,15 +153,16 @@ const Home = () => {
             </form>
           </section>
         }
-
-        <div  >
+     
+        <div className="container">
           {
-            products.map((product) => <div key={product.id} >
-              <h2  key={product.id}>{product.title}</h2>
-              <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-              <p>${product.price}</p>
-              <p>{product.description}</p>
-              <p><strong>{product.category}</strong></p>
+            products.map((product) => <div class="card" key={product.id} >
+              
+              <img  className="card-img-top mx-auto d-block" style={{ width: "80px", height: "auto" }} src={product.image} alt={`Imagen de ${product.title}`} />
+              <h2 className="card-title" key={product.id}>{product.title}</h2>
+              <p className="card-text">${product.price}</p>
+              <p className="card-text">{product.description}</p>
+              <p className="card-text"><strong>{product.category}</strong></p>
               {
                 user && <div>
                   <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
