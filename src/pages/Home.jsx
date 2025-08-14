@@ -116,9 +116,8 @@ const Home = () => {
          <div className="p-4">
             <label className="d-inline p-2 bd-highlight">Buscador:</label>
             <input className="d-inline p-2 bd-highlight rounded-pill " type="text" placeholder="Ingrese lo que busca..." />
-            <button type="button" class="btn btn-secondary d-inline ps-2 bd-highlight ms-2">Buscar</button>
+          
           </div>
-
 
         {
           showPopup && <section className="popup-edit">
