@@ -158,17 +158,17 @@ const Home = () => {
   <div className="row">
     {products.map((product) => (
       <div className="col-12 col-md-4 mb-4" key={product.id}>
-        <div className="card h-100 text-center custom-card">
+        <div className="card h-100 text-center custom-card ">
           <img
             className="card-img-top mx-auto d-block"
             style={{ width: "80px", height: "auto" }}
             src={product.image}
             alt={`Imagen de ${product.title}`}
           />
-          <h2 className="card-title">{product.title}</h2>
+          <h2 className="card-title fs-4 fw-bold ">{product.title}</h2>
           <p className="card-text">${product.price}</p>
           <p className="card-text">{product.description}</p>
-          <p className="card-text"><strong>{product.category}</strong></p>
+          <p className="card-text "><strong>{product.category}</strong></p>
           {user && (
             <div>
               <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
