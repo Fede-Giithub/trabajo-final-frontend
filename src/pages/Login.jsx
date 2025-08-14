@@ -25,11 +25,11 @@ const Login = () => {
 
   return (
     <Layout>
-      <h1>Inicia sesión</h1>
+      <h1 className="ps-4">Inicia sesión</h1>
 
-      <section>
+      <section className="ps-5">
         <h2>Hola, bienvenido de nuevo</h2>
-        <p>johnd, m38rmF$</p>
+        <p >johnd, m38rmF$</p>
         <form onSubmit={handleLogin}>
           <div>
             <label>Nombre de usuario:</label>
@@ -45,7 +45,7 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               value={password} />
           </div>
-          <button>Ingresar</button>
+          <button className="mt-3">Ingresar</button>
         </form>
       </section>
     </Layout>
