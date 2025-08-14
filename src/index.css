@@ -27,3 +27,12 @@ textarea {
   font-family: 'Roboto', sans-serif;
   
 }
+
+
+@media (max-width: 480px) {
+  
+}
+
+@media (max-width: 880px) and (min-width: 481px) {
+ 
+}
