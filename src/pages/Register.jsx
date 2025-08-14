@@ -34,12 +34,12 @@ const Register = () => {
 
   return (
     <Layout>
-      <h1>Registrate</h1>
+      <h1 className="ps-4">Registrate</h1>
 
-      <section>
+      <section className="ps-5">
         <h2>Hola, bienvenido</h2>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="mt-3">
             <label>Username:</label>
             <input
               type="text"
@@ -63,7 +63,7 @@ const Register = () => {
               value={password}
             />
           </div>
-          <button>Ingresar</button>
+          <button className="mt-3">Ingresar</button>
         </form>
 
         {
