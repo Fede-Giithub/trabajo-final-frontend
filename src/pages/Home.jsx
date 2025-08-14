@@ -23,6 +23,8 @@ const Home = () => {
     setProducts(data)
   }
 
+  const [buscar, setBuscar] = useState("");
+
   // El array vacío (dependencias) espera a que ejecute el return del jsx. Si tiene algo, useEffect se va a ejecutar cada vez que se modifique lo que este dentro de la dependencia.
   useEffect(() => {
     fetchingProducts()
@@ -115,7 +117,10 @@ const Home = () => {
         <p className="text-center" >Elegí entre nuestras categorías más populares.</p>
          <div className="p-4">
             <label className="d-inline p-2 bd-highlight">Buscador:</label>
-            <input className="d-inline p-2 bd-highlight rounded-pill " type="text" placeholder="Ingrese lo que busca..." />
+            <input className="d-inline p-2 bd-highlight rounded-pill " type="text" placeholder="Ingrese lo que busca..."
+            value={buscar}
+            onChange={(e) => setBuscar(e.target.value)}
+            />
           
           </div>
 
