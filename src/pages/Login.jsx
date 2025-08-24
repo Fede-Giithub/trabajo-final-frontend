@@ -7,19 +7,29 @@ import { useNavigate } from "react-router-dom"
 const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("");
   const { login } = useAuth()
 
   const nagivate = useNavigate()
-
+  
   const handleLogin = async (e) => {
     e.preventDefault()
     console.log({ username, password })
     const isLogin = await login(username, password)
+    setError("")
+   
+
+    
 
     if (isLogin) {
       setUsername("")
       setPassword("")
       nagivate("/")
+    }
+
+    if (!username ||  !password) {
+      setError("Debes completar todos los campos")
+      return
     }
   }
 
@@ -46,7 +56,7 @@ const Login = () => {
               value={password} />
           </div>
           <button className="mt-3">Ingresar</button>
-          
+          {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
       </section>
     </Layout>
