@@ -14,6 +14,8 @@ const Home = () => {
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
 
+  const [error, setError] = useState("");
+
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
 
@@ -52,6 +54,14 @@ const Home = () => {
   // petición al backend mediante fetch para modificar-> método PATCH / PUT https://fakeproductapi.com/products
   const handleUpdate = async (e) => {
     e.preventDefault()
+
+     setError(""); 
+
+  if (!titleEdit || !priceEdit || !descriptionEdit || !categoryEdit || !imageEdit) {
+    setError("Debe llenar todos los campos");
+    return; 
+  }
+
 
     const updatedProduct = {
       id: productToEdit.id,
@@ -127,7 +137,7 @@ const Home = () => {
         {
           showPopup && <section className="popup-edit">
             <h2>Editando producto.</h2>
-            <button onClick={() => setShowPopup(null)}>Cerrar</button>
+            <button onClick={() => { setShowPopup(null); setError(""); }}>Cerrar</button>
             <form onSubmit={handleUpdate}>
               <input
                 type="text"
@@ -159,6 +169,7 @@ const Home = () => {
                 onChange={(e) => setImageEdit(e.target.value)}
               />
               <button>Actualizar</button>
+              {error && <p style={{ color: "red" }}>{error}</p>}
             </form>
           </section>
         }
