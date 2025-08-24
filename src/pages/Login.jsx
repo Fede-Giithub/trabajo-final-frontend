@@ -46,6 +46,7 @@ const Login = () => {
               value={password} />
           </div>
           <button className="mt-3">Ingresar</button>
+          
         </form>
       </section>
     </Layout>

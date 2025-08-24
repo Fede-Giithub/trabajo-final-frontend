@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
+import { useAuth } from "../context/UserContext";
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -8,7 +9,9 @@ const Register = () => {
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
 
-  const handleSubmit = (e) => {
+  const { register } = useAuth();
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setError("")
     setSuccess("")
@@ -18,19 +21,17 @@ const Register = () => {
       return
     }
 
-    const newUser = {
-      username,
-      email,
-      password
+    const usuarioRegistrado = await register(username, password, email);
+
+    if (usuarioRegistrado) {
+      setSuccess("Usuario registrado con éxito");
+      setUsername("");
+      setEmail("");
+      setPassword("");
+    } else {
+      setError("Error al registrar usuario");
     }
-
-    console.log(newUser)
-    setSuccess("Usuario registrado con éxito")
-
-    setUsername("")
-    setEmail("")
-    setPassword("")
-  }
+  };
 
   return (
     <Layout>
@@ -66,15 +67,11 @@ const Register = () => {
           <button className="mt-3">Ingresar</button>
         </form>
 
-        {
-          error && <p style={{ color: "red" }}>{error}</p>
-        }
-        {
-          success && <p style={{ color: "green" }}>{success}</p>
-        }
+        {error && <p style={{ color: "red" }}>{error}</p>}
+        {success && <p style={{ color: "green" }}>{success}</p>}
       </section>
     </Layout>
-  )
-}
+  );
+} 
 
-export { Register }
+export { Register };
