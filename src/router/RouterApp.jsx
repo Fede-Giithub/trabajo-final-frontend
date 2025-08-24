@@ -5,6 +5,7 @@ import { Login } from "../pages/Login"
 import { Register } from "../pages/Register"
 import { NotFound } from "../pages/NotFound"
 import { PrivateRoute } from "../components/PrivateRoute"
+import { AboutUs } from "../pages/AboutUs"
 
 const RouterApp = () => {
   return (
@@ -15,6 +16,7 @@ const RouterApp = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/registrate" element={<Register />} />
         <Route path="*" element={<NotFound />} />
+         <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   )
