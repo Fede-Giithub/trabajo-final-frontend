@@ -4,6 +4,7 @@ import { Layout } from "../components/Layout"
 const AboutUs = () => {
   return (
     <Layout>
+      <section class="d-flex flex-column min-vh-100">
       <section>
         <h2>¿De qué trata el proyecto?</h2>
         <p>El proyecto es una página que simula registrarse, logearse y comprar cosas</p>
@@ -15,6 +16,7 @@ const AboutUs = () => {
       <section>
         <h2>¿Que tecnologías se usaron?</h2>
         <p>Se utilizaron react, bootstrap , html, css y javascript</p>
+      </section>
       </section>
     </Layout>
   )

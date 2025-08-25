@@ -35,6 +35,7 @@ const Login = () => {
 
   return (
     <Layout>
+      <section class="d-flex flex-column min-vh-100">
       <h1 className="ps-4">Inicia sesión</h1>
 
       <section className="ps-5">
@@ -58,6 +59,7 @@ const Login = () => {
           <button className="mt-3">Ingresar</button>
           {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
+      </section>
       </section>
     </Layout>
   )

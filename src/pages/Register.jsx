@@ -35,6 +35,7 @@ const Register = () => {
 
   return (
     <Layout>
+      <section class="d-flex flex-column min-vh-100">
       <h1 className="ps-4">Registrate</h1>
 
       <section className="ps-5">
@@ -69,6 +70,7 @@ const Register = () => {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
         {success && <p style={{ color: "green" }}>{success}</p>}
+      </section>
       </section>
     </Layout>
   );

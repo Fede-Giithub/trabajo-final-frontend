@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
 import logoCarrito from '../assets/logo_carrito.png';
+import "../styles/components/Header.css"
+
 const Header = () => {
   const { user, logout } = useAuth()
 

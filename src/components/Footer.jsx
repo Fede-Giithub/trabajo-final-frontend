@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor:"lightgreen", position: "fixed",
+    <footer style={{ backgroundColor:"#4CAF50", position: "sticky",
       bottom: 0, width: "100%"}}>
-      <p >Sitio desarrollado por <a  style={{ color:"green"}} href="https://www.linkedin.com/in/gabriel-alberini/" target="_blank">Gabriel Alberini</a></p>
+      <p >Sitio desarrollado por <a  style={{ color:"#245225ff"}} href="https://www.linkedin.com/in/gabriel-alberini/" target="_blank">Gabriel Alberini</a></p>
     </footer>
   )
 }
