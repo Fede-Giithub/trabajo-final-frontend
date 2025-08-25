@@ -43,20 +43,20 @@ const Login = () => {
         <p >johnd, m38rmF$</p>
         <form onSubmit={handleLogin}>
           <div>
-            <label>Nombre de usuario:</label>
-            <input
+            <label className="me-3">Nombre de usuario:  </label>
+            <input className=" mt-3 d-inline p-2 bd-highlight rounded-pill"
               type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username} />
           </div>
           <div>
-            <label>Contraseña:</label>
-            <input
+            <label className="me-3" >Contraseña:</label>
+            <input className="mt-3 d-inline p-2 bd-highlight rounded-pill"
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password} />
           </div>
-          <button className="mt-3">Ingresar</button>
+          <button style={{ background: "#4CAF50" }} className="mt-3 d-inline p-2 bd-highlight rounded-pill ">Ingresar</button>
           {error && <p style={{ color: "red" }}>{error}</p>}
         </form>
       </section>

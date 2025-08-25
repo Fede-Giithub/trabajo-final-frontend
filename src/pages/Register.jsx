@@ -42,30 +42,30 @@ const Register = () => {
         <h2>Hola, bienvenido</h2>
         <form onSubmit={handleSubmit}>
           <div className="mt-3">
-            <label>Username:</label>
-            <input
+            <label className="me-3" >Username:</label>
+            <input  className="mt-3 d-inline p-2 bd-highlight rounded-pill"
               type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>
           <div>
-            <label>Correo electrónico:</label>
-            <input
+            <label className="me-3">Correo electrónico:</label>
+            <input  className="mt-3 d-inline p-2 bd-highlight rounded-pill"
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
           </div>
           <div>
-            <label>Contraseña:</label>
-            <input
+            <label className="me-3" >Contraseña:</label>
+            <input  className="mt-3 d-inline p-2 bd-highlight rounded-pill"
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </div>
-          <button className="mt-3">Ingresar</button>
+          <button style={{ background: "#4CAF50" }} className="mt-3 d-inline p-2 bd-highlight rounded-pill">Ingresar</button>
         </form>
 
         {error && <p style={{ color: "red" }}>{error}</p>}
