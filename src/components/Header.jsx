@@ -15,11 +15,15 @@ const Header = () => {
       
   <nav className="nav ">
     <div className="d-flex justify-content-start align-items-center">
+   <Link to="/">
   <img
     src={logoCarrito}
     alt="logo carrito"
     style={{ width: "40px", height: "auto" }}
   />
+  </Link>
+  
+  
 </div>
   {user && (
     <>
