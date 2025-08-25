@@ -23,6 +23,18 @@ const Dashboard = () => {
       setError("El nombre debe tener al menos 4 caracteres")
       return
     }
+     if (name.length > 41) {
+      setError("El nombre debe tener menos de 40 caracteres")
+      return
+    }
+    if (description.length < 10) {
+      setError("La descripción es muy corta")
+      return
+    }
+    if (price < 1) {
+      setError("El precio debe ser mayor que 0")
+      return
+    }
 
     const newProduct = {
       id: crypto.randomUUID(),
