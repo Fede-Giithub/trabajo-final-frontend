@@ -61,6 +61,23 @@ const Home = () => {
     setError("Debe llenar todos los campos");
     return; 
   }
+  
+  if (titleEdit.length < 3) {
+      setError("El nombre debe tener al menos 4 caracteres")
+      return
+    }
+  if (descriptionEdit.length < 41) {
+      setError("La descripción es muy corta, debe tener al menos 40 caracteres")
+      return
+    }
+    if (categoryEdit.length < 3) {
+      setError("La categoriá debe tener al menos 4 caracteres")
+      return
+    }
+    if (priceEdit < 1) {
+      setError("El precio debe ser mayor que 0")
+      return
+    }
 
 
     const updatedProduct = {
