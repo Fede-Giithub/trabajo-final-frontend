@@ -28,17 +28,27 @@ textarea {
   
 }
 
-@media (max-width: 880px) and (min-width: 481px) {
- *{
 
-    background-color: red;
+
+@media (max-width: 880px) {
+  section {
+    width: 85%;
+    font-size: 0.95rem;
   }
 }
+
 
 @media (max-width: 480px) {
-  *{
-    background-color: blue;
-   
+  section {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%; 
   }
 }
-
