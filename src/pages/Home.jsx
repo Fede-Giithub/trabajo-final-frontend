@@ -152,40 +152,55 @@ const Home = () => {
           </div>
 
         {
-          showPopup && <section className="popup-edit">
+          showPopup && <section className="popup-edit ">
             <h2>Editando producto.</h2>
-            <button onClick={() => { setShowPopup(null); setError(""); }}>Cerrar</button>
+            <button  style={{ background: "#4CAF50" }} className="mt-3 d-inline p-2 bd-highlight rounded-pill" onClick={() => { setShowPopup(null); setError(""); }}>Cerrar</button>
             <form onSubmit={handleUpdate}>
-              <input
+              <div className="d-flex align-items-center mt-3"> 
+              <label className="me-3" >Titulo:</label>
+              <input className="mt-3  p-2 bd-highlight rounded-pill"
                 type="text"
                 placeholder="Ingrese el titulo"
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)}
               />
-              <input
+              </div>
+               <div className="d-flex align-items-center mt-3"> 
+              <label className="me-3" >Precio:</label>
+              <input className="mt-3  p-2 bd-highlight rounded-pill"
                 type="number"
                 placeholder="Ingrese el precio"
                 value={priceEdit}
                 onChange={(e) => setPriceEdit(e.target.value)}
               />
-              <textarea
+              </div>
+               <div className="d-flex align-items-center mt-3"> 
+              <label className="me-3" >Descripcion:</label>
+              <textarea className="mt-3 p-2"
                 placeholder="Ingrese la descripción"
                 value={descriptionEdit}
                 onChange={(e) => setDescriptionEdit(e.target.value)}
               ></textarea>
-              <input
+              </div>
+               <div className="d-flex align-items-center mt-3"> 
+              <label className="me-3" >Categoria:</label>
+              <input className="mt-3  p-2 bd-highlight rounded-pill"
                 type="text"
                 placeholder="Ingrese la categoria"
                 value={categoryEdit}
                 onChange={(e) => setCategoryEdit(e.target.value)}
               />
-              <input
+              </div>
+               <div className="d-flex align-items-center mt-3"> 
+              <label className="me-3" >Imagen:</label>
+              <input className="mt-3  p-2 bd-highlight rounded-pill"
                 type="text"
                 placeholder="Ingrese la URL de la imagen"
                 value={imageEdit}
                 onChange={(e) => setImageEdit(e.target.value)}
               />
-              <button>Actualizar</button>
+              </div>
+              <button style={{ background: "#4CAF50" }} className="mt-3  p-2 bd-highlight rounded-pill" >Actualizar</button>
               {error && <p style={{ color: "red" }}>{error}</p>}
             </form>
           </section>
@@ -209,8 +224,8 @@ const Home = () => {
           <p className="card-text "><strong>{product.category}</strong></p>
           {user && (
             <div>
-              <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
-              <button onClick={() => handleDelete(product.id)}>Borrar</button>
+              <button style={{ background: "#4CAF50" }} className="mt-3 d-inline p-2 bd-highlight rounded-pill" onClick={() => handleOpenEdit(product)}>Actualizar</button>
+              <button style={{ background: "#4CAF50" }}  className="mt-3 d-inline p-2 bd-highlight rounded-pill" onClick={() => handleDelete(product.id)}>Borrar</button>
             </div>
           )}
         </div>

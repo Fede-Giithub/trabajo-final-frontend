@@ -65,21 +65,21 @@ const Dashboard = () => {
     <Layout>
       <h1>Panel de Administración</h1>
 
-      <section>
+      <section class="d-flex flex-column min-vh-100" >
         <h2>Cargar nuevo producto</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <label>Nombre del producto:</label>
-            <input type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
+            <label className="me-3" >Nombre del producto:</label>
+            <input  className=" mt-3 d-inline p-2 bd-highlight rounded-pill" type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
           </div>
 
           <div>
-            <label>Precio:</label>
-            <input type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
+            <label  className="me-3" >Precio:</label>
+            <input className=" mt-3 d-inline p-2 bd-highlight rounded-pill" type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
           </div>
 
-          <div>
-            <label>Descripción:</label>
+          <div className="pt-3">
+            <label className="me-3 " >Descripción:</label>
             <textarea name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
           </div>
 
@@ -87,7 +87,7 @@ const Dashboard = () => {
             error && <p className="error">{error}</p>
           }
 
-          <button>Guardar producto</button>
+          <button style={{ background: "#4CAF50" }} className="mt-3 d-inline p-2 bd-highlight rounded-pill " >Guardar producto</button>
         </form>
 
         {

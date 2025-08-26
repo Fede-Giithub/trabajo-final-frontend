@@ -2,3 +2,14 @@
   background-color: #6ed370 !important;
 }
 
+.popup-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+  background-color: rgb(40, 195, 84) !important;
+  width: 60%;
+  margin: 20px auto;
+   padding: 10px;
+   border-radius: 10%;
+}
